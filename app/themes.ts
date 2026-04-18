@@ -62,5 +62,21 @@ export const themes = [
       codeFg: "#00ff99",
       inputBg: "#020402",
       inputBorder: "#003300"
+    },
+    {
+      id: "oceanBlue",
+      name: "Ocean Blue",
+      bg: "#071a4a",
+      fg: "#b7d4ff",
+      fgMuted: "#b7d4ff99",
+      accent: "#3ecfff",
+      accentHover: "#1bb8f0",
+      cardBg: "#0b245f",
+      cardBorder: "#12306f",
+      shadow: "rgba(30, 100, 255, 0.25)",
+      codeBg: "#0a1e4a",
+      codeFg: "#6ee7ff",
+      inputBg: "#0b245f",
+      inputBorder: "#12306f"
     }
 ];
