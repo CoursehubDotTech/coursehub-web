@@ -1,17 +1,16 @@
 "use client"
+import { themes } from "../themes";
 import "../themes.css";
-import { useEffect, useState } from "react";
+import { useTheme } from "../contexts/ThemeContext";
 
 export default function ThemeSelector() {
-    const [t, setT]= useState("default");
-    useEffect(() => {
-        document.documentElement.className = t;
-        localStorage.setItem("theme", t);
-    }, [t]);
+    const { themeId, setThemeId } = useTheme();
+
     return (
-        <div className="flex items-center flex-col gap-2 text-sm">
-            <button onClick={()=> setT("ember")} className="p-0.5 rounded-full ember" title="Ember Theme">Ember</button>
-            <button onClick={()=> setT("matrixGreen")} className="p-0.5 rounded-full matrixGreen" title="Matrix Green">Matrix Green</button>
-        </div>
+        <select className="bg-zinc-50!  dark:bg-inherit! p-2 rounded-md" value={themeId} onChange={(e) => setThemeId(e.target.value)}>
+            {themes.map(theme => (
+                <option key={theme.id} value={theme.id}>{theme.name}</option>
+            ))}
+        </select>
     );
 }
