@@ -1,5 +1,5 @@
 import * as clerk from '@clerk/nextjs/server';
-import Courses from "../../pages/Course";
+import Course from "../../pages/Course";
 
 export default async function Home() {
   const user = await clerk.currentUser();
@@ -8,6 +8,6 @@ export default async function Home() {
   } : null;
 
   return (
-    <Courses userObj={userObj}/>
+    <Course userObj={userObj}/>
   );
 }

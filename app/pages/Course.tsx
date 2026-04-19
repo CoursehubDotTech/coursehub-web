@@ -16,7 +16,7 @@ type Course = {
     data: string | null;
 }
 
-export default function CoursesPage({userObj}: {userObj: UserObj | null}) {
+export default function Course({userObj}: {userObj: UserObj | null}) {
     const [courses, setCourses] = useState<Course[]>([]);
     const [course, setCourse] = useState<Course | null>(null);
     const [loading, setLoading] = useState(true);

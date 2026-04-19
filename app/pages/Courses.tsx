@@ -96,9 +96,9 @@ export default function CoursesPage({userObj}: {userObj: UserObj | null}) {
                                             {course.description}
                                         </p>
                                     )}
-                                    <button className="mt-4 w-full bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-3 rounded transition-colors">
+                                    <Link className="mt-4 w-full bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-3 rounded transition-colors" href={`/courses/${course.id}`}>
                                         View Course
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         ))}
