@@ -92,11 +92,11 @@ export default function CoursesPage({userObj}: {userObj: UserObj | null}) {
                                         </p>
                                     )}
                                     {course.description && (
-                                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                                        <p className="text-sm mb-2 text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
                                             {course.description}
                                         </p>
                                     )}
-                                    <Link className="mt-4 w-full bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-3 rounded transition-colors" href={`/courses/${course.id}`}>
+                                    <Link className="mt-4 w-full btn-primary font-medium py-2 px-3 rounded transition-colors" href={`/courses/${course.id}`}>
                                         View Course
                                     </Link>
                                 </div>
