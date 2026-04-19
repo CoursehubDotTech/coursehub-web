@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import Markdown from "react-markdown";
 import { useEffect, useState } from "react";
 
 export type UserObj = {
@@ -87,7 +88,7 @@ export default function Course({userObj}: {userObj: UserObj | null}) {
                                 <h2 className="text-xl font-semibold mb-2">{course.name}</h2>
                                 <p className="text-gray-600 dark:text-gray-400">{course.description || "No description available."}</p>
                                 <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">Category: {course.category || "Uncategorized"}</p>
-                                <pre>{course.data || "No data available."}</pre>
+                                <Markdown>{course.data || "No data available."}</Markdown>
                             </div>
                         ) : (
                             <div className="flex justify-center items-center py-12">
