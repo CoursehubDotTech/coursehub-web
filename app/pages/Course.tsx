@@ -58,8 +58,8 @@ export default function Course({userObj}: {userObj: UserObj | null}) {
             <div className="flex flex-col items-center py-8">
                 {course ? (
                     <>
-                    <h1 className="text-xl font-semibold mb-2">{course.name}</h1>
-                <p className="text-lg">{course.description || "No description available."}</p>
+                    <h1 className="text-4xl font-semibold mb-2">{course.name}</h1>
+                <span className="text-[1rem] font-mono text-center">{course.description || "No description available."}</span>
                 <p className="mt-4 text-sm rounded-xl p-1">{course.category || "Uncategorized"}</p>
                     </>            
                 ) : null}
@@ -90,12 +90,30 @@ export default function Course({userObj}: {userObj: UserObj | null}) {
                 {!loading && !error && courses.length > 0 && (
                     <div className="max-w-4xl mx-auto grid">
                         {course ? (
-                            <div className="p-2.5 w-full! card">
-                                <Markdown>{course.data || "> No data available."}</Markdown>
+                            <div className="p-3.5 rounded-md hover:rounded-xl transition-all duration-500 w-full! card">
+                                <Markdown
+                                components={{
+                                    h1: (props)=>{
+                                        return <h1 className="text-2xl font-bold mb-4">{props.children}</h1>
+                                    },
+                                    h2: (props)=>{
+                                        return <h2 className="text-xl font-bold mb-3">{props.children}</h2>
+                                    },
+                                    h3: (props)=>{
+                                        return <h3 className="text-lg font-bold mb-2">{props.children}</h3>
+                                    },
+                                    strong: (props)=>{
+                                        return <strong className="font-bold bg-yellow-400! dark:bg-yellow-700!">{props.children}</strong>
+                                    },
+                                    blockquote: (props)=>{
+                                        return <blockquote className="italic pl-3 text-lg font-semibold">{props.children}</blockquote>
+                                    }
+                                }}
+                                >{course.data || "> No data available."}</Markdown>
                             </div>
                         ) : (
                             <div className="flex justify-center items-center py-12">
-                                <p className="text-gray-500 dark:text-gray-400">Course not found.</p>
+                                <p className="text-gray-500 dark:text-gray-400">The course you are looking for doesn&apos;t exist.</p>
                             </div>
                         )}    
                     </div>
