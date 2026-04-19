@@ -48,7 +48,7 @@ export default function Course({userObj}: {userObj: UserObj | null}) {
         }
 
         fetchCourses();
-    }, []);
+    }, [id]);
 
     const time = new Date().getHours();
     const greeting = time < 12 ? "Good morning" : time < 18 ? "Good afternoon" : "Good evening";
@@ -56,13 +56,19 @@ export default function Course({userObj}: {userObj: UserObj | null}) {
     return(
         <div className="flex flex-col flex-1 bg-zinc-50 dark:bg-black font-sans">
             <div className="flex flex-col items-center py-8">
-                <h1 className="text-3xl font-semibold">Course</h1>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                    {userObj?.fullName ? `${greeting}, ${userObj.fullName}!` : 'You are currently signed out.'}
+                {course ? (
+                    <>
+                    <h1 className="text-xl font-semibold mb-2">{course.name}</h1>
+                <p className="text-lg">{course.description || "No description available."}</p>
+                <p className="mt-4 text-sm rounded-xl p-1">{course.category || "Uncategorized"}</p>
+                    </>            
+                ) : null}
+                <p className="mt-2 text-md text-gray-600 dark:text-gray-400">
+                    {userObj?.fullName ? `${greeting}, ${userObj.fullName}! Have fun learning!` : 'You are currently signed out.'}
                 </p>
             </div>
 
-            <div className="flex-1 px-4 pb-8">
+            <div className="flex-1 px-4 pb-8 w-full">
                 {loading && (
                     <div className="flex justify-center items-center py-12">
                         <p className="text-gray-500 dark:text-gray-400">Loading course...</p>
@@ -82,13 +88,10 @@ export default function Course({userObj}: {userObj: UserObj | null}) {
                 )}
 
                 {!loading && !error && courses.length > 0 && (
-                    <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="max-w-4xl mx-auto grid">
                         {course ? (
-                            <div key={course.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-                                <h2 className="text-xl font-semibold mb-2">{course.name}</h2>
-                                <p className="text-gray-600 dark:text-gray-400">{course.description || "No description available."}</p>
-                                <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">Category: {course.category || "Uncategorized"}</p>
-                                <Markdown>{course.data || "No data available."}</Markdown>
+                            <div className="bg-white! dark:bg-gray-800! text-black! dark:text-white! w-full! card">
+                                <Markdown>{course.data || "> No data available."}</Markdown>
                             </div>
                         ) : (
                             <div className="flex justify-center items-center py-12">
