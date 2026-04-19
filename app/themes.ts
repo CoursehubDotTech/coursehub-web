@@ -66,7 +66,7 @@ export const themes = [
     {
       id: "oceanBlue",
       name: "Ocean Blue",
-      bg: "#003fff",
+      bg: "#061dfd",
       fg: "#b7d4ff",
       fgMuted: "#b7d4ff99",
       accent: "#3ecfff",
