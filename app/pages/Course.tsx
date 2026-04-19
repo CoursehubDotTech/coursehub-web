@@ -90,7 +90,7 @@ export default function Course({userObj}: {userObj: UserObj | null}) {
                 {!loading && !error && courses.length > 0 && (
                     <div className="max-w-4xl mx-auto grid">
                         {course ? (
-                            <div className="bg-white! dark:bg-gray-800! text-black! dark:text-white! w-full! card">
+                            <div className="bg-white! text-black! p-2.5 w-full! card">
                                 <Markdown>{course.data || "> No data available."}</Markdown>
                             </div>
                         ) : (
