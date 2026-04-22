@@ -103,7 +103,7 @@ export default function Course({userObj}: {userObj: UserObj | null}) {
                                         return <h3 className="text-lg font-bold mb-2">{props.children}</h3>
                                     },
                                     strong: (props)=>{
-                                        return <strong className="font-bold bg-yellow-400! dark:bg-yellow-700!">{props.children}</strong>
+                                        return <strong className="font-bold text-highlight">{props.children}</strong>
                                     },
                                     blockquote: (props)=>{
                                         return <blockquote className="italic pl-3 text-lg font-semibold">{props.children}</blockquote>

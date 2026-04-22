@@ -21,6 +21,8 @@
 
     --input-bg: #ffffff;
     --input-border: #d4d4d4;
+
+    --text-highlight: #ffeb3b;
 }
 
 /* ============================================================
@@ -64,4 +66,9 @@ input, textarea, select {
 pre, code {
     background-color: var(--code-bg);
     color: var(--code-fg);
+}
+
+/*** Text highlights */
+.text-highlight {
+    background-color: var(--text-highlight);
 }

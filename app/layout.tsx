@@ -36,7 +36,7 @@ export default function RootLayout({
                 <SignUpButton mode="modal" />
               </Show>
               <Show when="signed-in">
-                <UserButton />
+                <UserButton/>
               </Show>
               <ThemeSelector />
             </header>
