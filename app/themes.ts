@@ -73,7 +73,7 @@ export const themes = [
       bg: "#081c44",
       fg: "#d8e8ff",
       fgMuted: "#9fb8e6",
-      accent: "#57d0ff",
+      accent: "#2940c2",
       accentHover: "#33b8f5",
       cardBg: "#0d295f",
       cardBorder: "#1d3f82",
