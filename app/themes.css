@@ -30,7 +30,7 @@
    ============================================================ */
 
 html, body {
-    background-color: var(--bg);
+    background: var(--bg);
     color: var(--fg);
 }
 
@@ -41,18 +41,18 @@ html, body {
 
 /* Cards */
 .card {
-    background-color: var(--card-bg);
+    background: var(--card-bg);
     border: 1px solid var(--card-border);
     box-shadow: 0 2px 8px var(--shadow);
 }
 
 /* Buttons */
 .btn-primary {
-    background-color: var(--accent);
+    background: var(--accent);
     color: white;
 }
 .btn-primary:hover {
-    background-color: var(--accent-hover);
+    background: var(--accent-hover);
 }
 
 /* Inputs */

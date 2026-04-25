@@ -51,23 +51,6 @@ export const themes = [
       textHighlight: "#cca033"
     },
     {
-      id: "matrixGreen",
-      name: "Matrix Green",
-      bg: "#030703",
-      fg: "#8cff8c",
-      fgMuted: "#58c758",
-      accent: "#32ff9c",
-      accentHover: "#1de083",
-      cardBg: "#081108",
-      cardBorder: "#1e4f1f",
-      shadow: "rgba(50,255,156,0.18)",
-      codeBg: "#061006",
-      codeFg: "#5cffc0",
-      inputBg: "#081108",
-      inputBorder: "#2a642b",
-      textHighlight: "#6d6400"
-    },
-    {
       id: "oceanBlue",
       name: "Ocean Blue",
       bg: "#081c44",
@@ -100,5 +83,22 @@ export const themes = [
       inputBg: "#1a332a",
       inputBorder: "#2f5c4a",
       textHighlight: "#84a546"
-    }
+    },
+    {
+      id: "nightSky",
+      name: "Night Sky",
+      bg: "url(https://images.unsplash.com/photo-1467810160588-c86c0deb5d16?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+      fg: "#e0d5ff",
+      fgMuted: "#c9b8e0",
+      accent: "#b48fff",
+      accentHover: "#00d4ff",
+      cardBg: "#0a0a1a",
+      cardBorder: "#2d1b4d",
+      shadow: "rgba(100, 50, 200, 0.25)",
+      codeBg: "#0f0515",
+      codeFg: "#ffb86c",
+      inputBg: "#0d0620",
+      inputBorder: "#3a2858",
+      textHighlight: "#ff9d76"
+    },
 ];
