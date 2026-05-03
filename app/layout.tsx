@@ -46,6 +46,9 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </ClerkProvider>
+        <footer className={"p-2 mt-8"}>
+          <p>&copy; Coursehub.tech {new Date().getFullYear()} - All rights reserved.</p>
+      </footer>
       </body>
     </html>
   )
