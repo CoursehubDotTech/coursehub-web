@@ -28,6 +28,10 @@ export default function TermsOfServicePage() {
           These terms are intended to align with GDPR principles, including data minimization,
           transparency, and user rights.
         </p>
+        <p>
+          If you request account deletion, associated personal data is deleted or anonymized in
+          accordance with applicable legal obligations and GDPR right-to-erasure requirements.
+        </p>
       </section>
     </main>
   );

@@ -14,7 +14,8 @@ export default function PrivacyPolicyPage() {
       <section className="mt-6 space-y-3 text-sm text-gray-700 dark:text-gray-300">
         <p>
           Coursehub is committed to GDPR-aligned privacy practices. We collect only the data
-          needed to provide the service, such as account and learning-related information.
+          needed to provide the service, such as your name, email address, authentication
+          identifiers, and learning-related progress data.
         </p>
         <p>
           We do not sell or share your personal data with third parties for marketing or
@@ -38,7 +39,8 @@ export default function PrivacyPolicyPage() {
         </p>
         <p>
           You may request access, correction, or deletion of your personal data, and you may
-          contact us at privacy@coursehub.tech to exercise your GDPR rights.
+          contact us at privacy@coursehub.tech to exercise your GDPR rights. We aim to respond
+          to GDPR data requests within 30 days.
         </p>
       </section>
     </main>
