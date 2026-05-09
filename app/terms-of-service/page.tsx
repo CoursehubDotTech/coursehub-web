@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service | Coursehub',
+  description: 'Coursehub Terms of Service, including account handling via Clerk and GDPR-aligned commitments.',
+};
+
 export default function TermsOfServicePage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-10">

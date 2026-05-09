@@ -1,3 +1,11 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Coursehub',
+  description: 'Coursehub Privacy Policy with GDPR-aligned commitments, data-sharing terms, and Clerk account management details.',
+};
+
 export default function PrivacyPolicyPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-10">
@@ -17,8 +25,20 @@ export default function PrivacyPolicyPage() {
           identity provider.
         </p>
         <p>
+          For details on how Clerk processes personal data, please see the{' '}
+          <Link
+            href="https://clerk.com/legal/privacy"
+            className="text-purple-700 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Clerk Privacy Policy
+          </Link>
+          .
+        </p>
+        <p>
           You may request access, correction, or deletion of your personal data, and you may
-          contact us to exercise your GDPR rights.
+          contact us at privacy@coursehub.tech to exercise your GDPR rights.
         </p>
       </section>
     </main>
