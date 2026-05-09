@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { ClerkProvider, Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
 import { Geist, Geist_Mono } from 'next/font/google'
+import Link from 'next/link'
 import './globals.css'
 import ThemeSelector from "./components/ThemeSelector";
 import { ThemeProvider } from './contexts/ThemeContext';
@@ -46,8 +47,18 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </ClerkProvider>
-        <footer className={"p-2 mt-8"}>
-          <p>&copy; Coursehub.tech {new Date().getFullYear()} - All rights reserved.</p>
+        <footer className="p-4 mt-8 border-t border-zinc-200 dark:border-zinc-800">
+          <div className="flex flex-col gap-2 text-sm">
+            <p>&copy; Coursehub.tech {new Date().getFullYear()} - All rights reserved.</p>
+            <div className="flex gap-4">
+              <Link href="/terms-of-service" className="text-purple-700 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300">
+                Terms of Service
+              </Link>
+              <Link href="/privacy-policy" className="text-purple-700 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300">
+                Privacy Policy
+              </Link>
+            </div>
+          </div>
       </footer>
       </body>
     </html>
