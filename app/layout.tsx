@@ -47,7 +47,7 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </ClerkProvider>
-        <footer aria-label="Site footer" className="p-4 mt-8 border-t border-zinc-200 dark:border-zinc-800">
+        <footer className="p-4 mt-8 border-t border-zinc-200 dark:border-zinc-800">
           <div className="flex flex-col gap-2 text-sm">
             <p>&copy; Coursehub.tech {new Date().getFullYear()} - All rights reserved.</p>
             <div className="flex gap-4">
